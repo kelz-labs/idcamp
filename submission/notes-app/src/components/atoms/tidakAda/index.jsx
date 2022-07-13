@@ -1,6 +1,6 @@
 const TidakAda = () => {
   return (
-    <div className="flex justify-center items-center flex-col">
+    <div className="flex justify-center text-center mt-6 items-center flex-col">
       <img
         src="/img/tidak-ada.svg"
         alt="Tidak ada catatan"

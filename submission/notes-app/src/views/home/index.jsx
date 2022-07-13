@@ -11,9 +11,9 @@ import { generateId, showFormattedDate } from "../../utils/notes";
 import { toast } from "react-toastify";
 import Header from "../../components/atoms/header";
 import TidakAda from "../../components/atoms/tidakAda";
-import "react-toastify/dist/ReactToastify.css";
 import FormInput from "../../components/moleculs/formInput";
 import ListNote from "../../components/moleculs/listNote";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [notes, setNotes] = useAtom(notesAtom);
@@ -36,7 +36,7 @@ const Home = () => {
     setFormData(data);
 
     if (event.target.value.length >= 0 && event.target.value.length <= 50) {
-      setLimitChar(`Jumlah Karakter: ${event.target.value.length}`);
+      setLimitChar(`Sisa Karakter: ${50 - event.target.value.length}`);
     } else {
       setLimitChar("Karakter melebihi batas!");
     }
@@ -73,6 +73,7 @@ const Home = () => {
     });
 
     setNotes(data);
+    setLimitChar(`Sisa Karakter: ${50}`);
     setFormData({ judul: "", keterangan: "", createdAt: "", archived: false });
     setIsUpdate({ id: null, status: false });
   };

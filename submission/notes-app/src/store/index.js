@@ -2,7 +2,7 @@ import { atom } from "jotai";
 import { initialDataNotes } from "../utils/notes";
 
 export const notesAtom = atom(initialDataNotes);
-export const limitCharAtom = atom(`Jumlah Karakter: ${0}`);
+export const limitCharAtom = atom(`Sisa Karakter: ${50}`);
 export const isUpdateAtom = atom({ id: null, status: false });
 
 export const formDataAtom = atom({

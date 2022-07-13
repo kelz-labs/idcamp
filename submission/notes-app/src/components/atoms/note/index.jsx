@@ -3,10 +3,10 @@ const Note = ({ editNote, deleteNote, filteredSearch }) => {
     <>
       {filteredSearch.map((note, index) => (
         <div
-          className="bg-slate-50 shadow-md p-4 hover:scale-105 duration-200 transition rounded-md flex flex-col justify-center items-center sm:justify-start sm:items-start cursor-pointer"
+          className="bg-gray-50 dark:bg-gray-800 shadow-md p-4 hover:scale-105 duration-200 transition rounded-md flex flex-col justify-start items-start cursor-pointer"
           key={index + 1}
         >
-          <h2 className="mb-1 font-bold">ID: {note.id}</h2>
+          <p className="mb-1 font-bold">ID: {note.id}</p>
           <p className="mb-1 font-bold">Judul: {note.judul}</p>
           <p className="mb-1 font-bold">Tanggal: {note.createdAt}</p>
           <p className="font-bold mb-1">

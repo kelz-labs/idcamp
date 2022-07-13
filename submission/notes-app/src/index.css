@@ -5,3 +5,7 @@
 * {
   @apply font-all outline-none;
 }
+
+body {
+  @apply dark:bg-gray-900 dark:text-white;
+}
